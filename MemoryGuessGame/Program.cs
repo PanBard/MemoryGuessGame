@@ -19,7 +19,7 @@ namespace MemoryGame
         public static string coordinates;
         public static string coordinates2;
         public static int tim = 0;
-        public static int chance = 0;
+        public static int chance;
         public static int term1;
         public static int term2;
         public static char char1;
