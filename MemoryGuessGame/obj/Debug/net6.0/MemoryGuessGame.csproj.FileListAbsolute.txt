@@ -1,0 +1,15 @@
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\bin\Debug\net6.0\MemoryGuessGame.exe
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\bin\Debug\net6.0\MemoryGuessGame.deps.json
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\bin\Debug\net6.0\MemoryGuessGame.runtimeconfig.json
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\bin\Debug\net6.0\MemoryGuessGame.dll
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\bin\Debug\net6.0\MemoryGuessGame.pdb
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.csproj.AssemblyReference.cache
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.AssemblyInfoInputs.cache
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.AssemblyInfo.cs
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.csproj.CoreCompileInputs.cache
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.dll
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\refint\MemoryGuessGame.dll
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.pdb
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\MemoryGuessGame.genruntimeconfig.cache
+C:\Users\Jan\Documents\GitHub\MemoryGuessGame\MemoryGuessGame\obj\Debug\net6.0\ref\MemoryGuessGame.dll
