@@ -121,43 +121,38 @@ namespace MemoryGame
                     coordinates = Console.ReadLine();
                     tim++;
 
-                    if((coordinates[0] != 'A')&&(coordinates[0]!='B'))
-                    {
-                        Console.WriteLine("Wrong coordinates!");
-                        Thread.Sleep(1000);
-                        LoadMatrix4();
-                    }
-
                     switch (coordinates)
                     {
-                        case "A1": word1A = WordsA8[0]; LoadMatrix4(); term1 = 0; char1 = 'A'; break;
-                        case "A2": word2A = WordsA8[1]; LoadMatrix4(); term1 = 1; char1 = 'A'; break;
-                        case "A3": word3A = WordsA8[2]; LoadMatrix4(); term1 = 2; char1 = 'A'; break;
-                        case "A4": word4A = WordsA8[3]; LoadMatrix4(); term1 = 3; char1 = 'A'; break;
+                        case "A1": word1A = WordsA4[0]; LoadMatrix4(); term1 = 0; char1 = 'A'; break;
+                        case "A2": word2A = WordsA4[1]; LoadMatrix4(); term1 = 1; char1 = 'A'; break;
+                        case "A3": word3A = WordsA4[2]; LoadMatrix4(); term1 = 2; char1 = 'A'; break;
+                        case "A4": word4A = WordsA4[3]; LoadMatrix4(); term1 = 3; char1 = 'A'; break;
                         
 
-                        case "B1": word1B = WordsB8[0]; LoadMatrix4(); term1 = 0; char1 = 'B'; break;
-                        case "B2": word2B = WordsB8[1]; LoadMatrix4(); term1 = 1; char1 = 'B'; break;
-                        case "B3": word3B = WordsB8[2]; LoadMatrix4(); term1 = 2; char1 = 'B'; break;
-                        case "B4": word4B = WordsB8[3]; LoadMatrix4(); term1 = 3; char1 = 'B'; break;
+                        case "B1": word1B = WordsB4[0]; LoadMatrix4(); term1 = 0; char1 = 'B'; break;
+                        case "B2": word2B = WordsB4[1]; LoadMatrix4(); term1 = 1; char1 = 'B'; break;
+                        case "B3": word3B = WordsB4[2]; LoadMatrix4(); term1 = 2; char1 = 'B'; break;
+                        case "B4": word4B = WordsB4[3]; LoadMatrix4(); term1 = 3; char1 = 'B'; break;
                        
 
 
                     }
 
-                    /*     Console.WriteLine();
+                         Console.WriteLine();
                          Console.WriteLine("Liczba tim: " + tim);
                          Console.WriteLine("Liczba term1: " + term1);
                          Console.WriteLine("Liczba term2: " + term2);
                          Console.WriteLine("Liczba char1: " + char1);
                        Console.WriteLine("Liczba char2: " + char2);
-                     */
+                    Console.ReadLine();
+                    
                     while (tim == 2)
                     {
-                        if (WordsA8[term1] == WordsB8[term2])
+                        if ((WordsA4[term1] == WordsB4[term2])^(WordsA4[term2] == WordsB4[term1]))
                         {
 
-                            Console.WriteLine("YOU WIN");
+                            Console.WriteLine("YOU GUESSED!");
+                            Thread.Sleep(2000);
                             LoadMatrix4();
 
                             tim = tim - 2;
@@ -197,9 +192,9 @@ namespace MemoryGame
 
                             }
 
-                            Console.WriteLine("YOU LOST CHANCE");
+                            Console.WriteLine("YOU LOSE ONE CHANCE!");
                             chance--;
-                            Thread.Sleep(3000);
+                            Thread.Sleep(2000);
                             LoadMatrix4();
 
 
@@ -217,6 +212,13 @@ namespace MemoryGame
                     {
                         Console.Clear();
                         Console.Write("YOU LOSE! \n Do you want to play again? \n Enter yes or no: ");
+                        Console.ReadLine();
+                    }
+
+                    if ((word1A != "X")&& (word2A != "X") && (word3A != "X") && (word4A != "X") && (word1B != "X") && (word2B != "X") && (word3B != "X") && (word4B != "X") )
+                    {
+                        Console.Clear();
+                        Console.Write("YOU WIN! \n Do you want to play again? \n Enter yes or no: ");
                         Console.ReadLine();
                     }
 
@@ -241,8 +243,14 @@ namespace MemoryGame
                 while (true)
                 {           coordinates = Console.ReadLine();
                             tim++;
-                
-                            switch (coordinates)
+                    if ((coordinates[0] != 'A') && (coordinates[0] != 'B'))
+                    {
+                        Console.WriteLine("Wrong coordinates!");
+                        Thread.Sleep(1000);
+                        LoadMatrix8();
+                    }
+
+                    switch (coordinates)
                             {
                                 case "A1": word1A = WordsA8[0]; LoadMatrix8(); term1 = 0; char1 = 'A'; break;
                                 case "A2": word2A = WordsA8[1]; LoadMatrix8(); term1 = 1; char1 = 'A'; break;
@@ -274,10 +282,11 @@ namespace MemoryGame
                         */ 
                     while (tim == 2)
                     {
-                        if (WordsA8[term1] == WordsB8[term2])
+                        if ((WordsA8[term1] == WordsB8[term2]) ^ (WordsA8[term2] == WordsB8[term1]))
                         {
 
-                            Console.WriteLine("YOU WIN");
+                            Console.WriteLine("YOU GUESSED!");
+                            Thread.Sleep(1000);
                             LoadMatrix8();
 
                             tim = tim - 2;
@@ -329,9 +338,9 @@ namespace MemoryGame
 
                             }
 
-                            Console.WriteLine("YOU LOST CHANCE");
+                            Console.WriteLine("YOU LOST ONE CHANCE!");
                             chance--;
-                            Thread.Sleep(3000);
+                            Thread.Sleep(2000);
                             LoadMatrix8();
 
                             
@@ -371,21 +380,7 @@ namespace MemoryGame
         } // main
 
 /* 
-        public static void LoadMatrix4()
-        {
-           Console.Clear();
-            Console.WriteLine("--------------------------");
-            Console.WriteLine("     Level:  easy");
-            Console.WriteLine("     Guess chances: " + chance + " \n");
-            Console.WriteLine("       1 2 3 ");
-            Console.WriteLine("     A " + word1A + " " + word1 + " " + word1 + " " + word1);
-            Console.WriteLine("     B " + word1B + " " + word1B + " " + MatrixB4[2] + " " + MatrixB4[3] );
-            Console.WriteLine("--------------------------");
-            Console.Write("Enter coordinate: ");
-
-            coordinates = Console.ReadLine();
-
-        }  
+       
 */
 
         public static void LoadMatrix8()
@@ -399,8 +394,9 @@ namespace MemoryGame
             Console.WriteLine("     B " + word1B + " " + word2B + " " + word3B + " " + word4B + " " + word5B + " " + word6B + " " + word7B + " " + word8B);
             Console.WriteLine("--------------------------");
             Console.Write("Enter coordinate: ");
-           
-         //   coordinates = Console.ReadLine();
+
+            
+            //   coordinates = Console.ReadLine();
 
         }
 
@@ -415,8 +411,6 @@ namespace MemoryGame
             Console.WriteLine("     B " + word1B + " " + word2B + " " + word3B + " " + word4B);
             Console.WriteLine("--------------------------");
             Console.Write("Enter coordinate: ");
-
-            //   coordinates = Console.ReadLine();
 
         }
 
