@@ -22,8 +22,6 @@ namespace MemoryGame
         public static int chance;
         public static int term1;
         public static int term2;
-        public static char char1;
-        public static char char2;
         public static char logic1;
         public static char logic2;
 
@@ -127,7 +125,10 @@ namespace MemoryGame
                   
                     while (tim == 2)
                     {
-                        if ((WordsA4[term1] == WordsB4[term2])^(WordsA4[term2] == WordsB4[term1]))
+                        bool result1 = WordsA4[term1].Equals(WordsB4[term2]);
+                        bool result2 = WordsA4[term2].Equals(WordsB4[term1]);
+
+                        if (result1^result2)
                         {
                             Console.WriteLine("YOU GUESSED!");
                             Thread.Sleep(2000);
@@ -237,7 +238,10 @@ namespace MemoryGame
                     
                     while (tim == 2)
                     {
-                        if ((WordsA8[term1] == WordsB8[term2]) ^ (WordsA8[term2] == WordsB8[term1]))
+                        bool result1 = WordsA8[term1].Equals(WordsB8[term2]);
+                        bool result2 = WordsA8[term2].Equals(WordsB8[term1]);
+
+                        if (result1^result2)
                         {
 
                             Console.WriteLine("YOU GUESSED!");
@@ -312,7 +316,7 @@ namespace MemoryGame
                         Console.Write("YOU LOSE! \n Do you want to play again? \n Enter yes or no: ");
                     }
 
-                    if ((word1A != "X") && (word2A != "X") && (word3A != "X") && (word4A != "X") && (word1B != "X") && (word2B != "X") && (word3B != "X") && (word4B != "X"))
+                    if ((word1A != "X") && (word2A != "X") && (word3A != "X") && (word4A != "X") && (word1B != "X") && (word2B != "X") && (word3B != "X") && (word4B != "X")&&(word5A != "X") && (word6A != "X") && (word7A != "X") && (word8A != "X") && (word5B != "X") && (word6B != "X") && (word7B != "X") && (word8B != "X"))
                     {
                         Console.Clear();
                         Console.Write("YOU WIN! \n Do you want to play again? \n Enter yes or no: ");
